@@ -39,8 +39,9 @@ ARG SETTINGS=./settings.json.docker
 # If given a value, it has to be a space-separated, quoted list of plugin names.
 #
 # EXAMPLE:
-#   ETHERPAD_PLUGINS="ep_codepad ep_author_neat"
-ARG ETHERPAD_PLUGINS=
+#   ETHERPAD_PLUGINS="ep_codepad ep_author_neat" 
+# excluded but recommended "ep_webrtc"
+ARG ETHERPAD_PLUGINS="ep_align ep_small_list ep_padlist2 ep_comments_page ep_embedded_hyperlinks2 ep_font_color ep_headings2 ep_markdown ep_prometheus"
 
 # local plugins to install while building the container. By default no plugins are
 # installed.
@@ -72,7 +73,7 @@ ARG INSTALL_ABIWORD=
 #
 # EXAMPLE:
 #   INSTALL_LIBREOFFICE=true
-ARG INSTALL_SOFFICE=
+ARG INSTALL_SOFFICE=true
 
 # Install dependencies required for modifying access.
 RUN apk add --no-cache shadow bash

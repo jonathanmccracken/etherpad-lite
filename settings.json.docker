@@ -344,7 +344,7 @@
    * LibreOffice can be used in lieu of Abiword to export pads.
    * Setting it to null disables LibreOffice exporting.
    */
-  "soffice": "${SOFFICE:null}",
+  "soffice": "/usr/bin/soffice",
 
   /*
    * Allow import of file types other than the supported ones:
@@ -537,7 +537,7 @@
     "admin": {
       // 1) "password" can be replaced with "hash" if you install ep_hash_auth
       // 2) please note that if password is null, the user will not be created
-      "password": "${ADMIN_PASSWORD:null}",
+      "password": "admin",
       "is_admin": true
     },
     "user": {
